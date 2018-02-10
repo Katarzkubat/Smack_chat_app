@@ -11,4 +11,8 @@
     <string name="login_hint">Please log in</string>
     <string name="message">message</string>
     <string name="image_button_description">image button</string>
+    <string name="message_image">message_image</string>
+    <string name="message_dummy_text">Kasza Kasza</string>
+    <string name="message_dummy_message">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</string>
+    <string name="message_dummy_date">07.02.2018 20:59</string>
 </resources>
