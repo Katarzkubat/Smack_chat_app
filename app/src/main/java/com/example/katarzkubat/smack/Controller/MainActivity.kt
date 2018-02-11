@@ -48,7 +48,6 @@ class MainActivity : AppCompatActivity() {
         messageListView.adapter = messageAdapter
         val layoutManager = LinearLayoutManager(this)
         messageListView.layoutManager = layoutManager
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,9 +65,11 @@ class MainActivity : AppCompatActivity() {
         toggle.syncState()
         setupAdapter()
 
+        //register BrdctReceiver
         LocalBroadcastManager.getInstance(this).registerReceiver(userDataChangeReceiver,
                 IntentFilter(BROADCAST_USER_DATA_CHANGE))
 
+        //make list items clickable
         channel_list.setOnItemClickListener { adapterView, view, i, l ->
             selectedChannel = MessageService.channels[i]
             drawer_layout.closeDrawer(GravityCompat.START)
@@ -76,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if(App.sharPrefs.isLoggedIn) {
-            AuthService.findUseByEmail(this){}
+            AuthService.findUserByEmail(this){}
         }
     }
 

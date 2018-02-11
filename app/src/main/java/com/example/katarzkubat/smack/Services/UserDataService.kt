@@ -44,9 +44,17 @@ object UserDataService {
         val scanner = Scanner(strippedColor)
 
         if(scanner.hasNext()) {
+
+            try{
             r = (scanner.nextDouble() * 225).toInt()
             g = (scanner.nextDouble() * 225).toInt()
             b = (scanner.nextDouble() * 225).toInt()
+        } catch (e: InputMismatchException) {
+
+                r = 255
+                g = 255
+                b = 255
+            }
         }
         return Color.rgb(r, g, b)
     }

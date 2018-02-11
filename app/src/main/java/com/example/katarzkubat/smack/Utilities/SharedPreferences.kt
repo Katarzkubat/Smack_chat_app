@@ -29,5 +29,4 @@ class SharedPreferences(context: Context) {
         set(value) = preferences.edit().putString(USER_EMAIL, value).apply()
 
     var requestQueue = Volley.newRequestQueue(context)
-
 }

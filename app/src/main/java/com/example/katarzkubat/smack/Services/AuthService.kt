@@ -136,7 +136,7 @@ object AuthService {
         App.sharPrefs.requestQueue.add(createRequest)
     }
 
-    fun findUseByEmail(context: Context, complete: (Boolean) -> Unit) {
+    fun findUserByEmail(context: Context, complete: (Boolean) -> Unit) {
         val findUserRequest = object : JsonObjectRequest(Method.GET, "$URL_GET_USER${App.sharPrefs.userEmail}", null,
            Response.Listener {  response ->
                try {

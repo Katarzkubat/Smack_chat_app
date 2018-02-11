@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
 
             AuthService.loginUser(email, password) { loginSuccess ->
                 if (loginSuccess) {
-                    AuthService.findUseByEmail(this) { findSuccess ->
+                    AuthService.findUserByEmail(this) { findSuccess ->
                         if (findSuccess) {
                             enableSpinner(false)
                             finish()
@@ -58,6 +58,7 @@ class LoginActivity : AppCompatActivity() {
         Toast.makeText(this, "Something went wrong, please try again.", Toast.LENGTH_LONG).show()
         enableSpinner(false)
     }
+
     fun enableSpinner(enabled: Boolean) {
 
         if (enabled) {

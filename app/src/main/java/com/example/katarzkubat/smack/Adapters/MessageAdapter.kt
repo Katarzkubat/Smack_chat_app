@@ -49,7 +49,7 @@ class MessageAdapter(val context: Context, val messages: ArrayList<Message>) : R
 
         fun returnDataString(isoString: String) : String {
 
-            val isoFormater = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z", Locale.getDefault())
+            val isoFormater = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
             isoFormater.timeZone = TimeZone.getTimeZone("UTC")
             var convertedDate = Date()
 
